@@ -1,5 +1,5 @@
 {
-  "name": "blog-api",
+  "name": "nodejs-with-nix",
   "version": "0.0.0",
   "private": true,
   "scripts": {
