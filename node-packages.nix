@@ -474,8 +474,8 @@ let
     };
   };
   args = {
-    name = "blog-api";
-    packageName = "blog-api";
+    name = "nodejs-with-nix";
+    packageName = "nodejs-with-nix";
     version = "0.0.0";
     src = ./.;
     dependencies = [
@@ -536,7 +536,7 @@ let
     meta = {
     };
     production = true;
-    bypassCache = false;
+    bypassCache = true;
   };
 in
 {
