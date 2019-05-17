@@ -5,5 +5,15 @@ with pkgs; stdenv.mkDerivation {
   buildInputs = [
     nodePackages.node2nix
     nodejs-10_x
+    postgresql
   ];
+  shellHook = ''
+    export PGDATA="$PWD/.postgresql/data"
+
+    if [ ! -d $PGDATA ]; then
+      initdb -D $PGDATA
+    fi
+
+    pg_ctl start -D $PGDATA -l .postgresql/log
+  '';
 }
