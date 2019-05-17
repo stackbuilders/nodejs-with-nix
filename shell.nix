@@ -10,6 +10,8 @@ with pkgs; stdenv.mkDerivation {
   shellHook = ''
     export PGDATA="$PWD/.postgresql/data"
 
+    export DATABASE_URL="postgresql:///postgres"
+
     if [ ! -d $PGDATA ]; then
       initdb -D $PGDATA
     fi
