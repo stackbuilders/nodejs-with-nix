@@ -17,5 +17,7 @@ with pkgs; stdenv.mkDerivation {
     fi
 
     pg_ctl start -D $PGDATA -l .postgresql/log
+
+    alias node2nix="node2nix --nodejs-10"
   '';
 }
