@@ -2,8 +2,13 @@
   webserver = { pkgs, ... }:
   let 
     backend = import ./backend {};
+    frontend = import ./frontend {};
   in {
     networking.firewall.allowedTCPPorts = [ 80 ];
+
+    environment.systemPackages = [
+      frontend.package
+    ];
 
     services.nginx = {
       enable = true;
