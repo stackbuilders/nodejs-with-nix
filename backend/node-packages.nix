@@ -1805,7 +1805,7 @@ let
       sources."invert-kv-2.0.0"
       sources."ipaddr.js-1.9.0"
       sources."is-bluebird-1.0.2"
-      sources."is-fullwidth-code-point-1.0.0"
+      sources."is-fullwidth-code-point-2.0.0"
       sources."is-promise-2.1.0"
       sources."is-stream-1.1.0"
       sources."isexe-2.0.0"
@@ -1904,11 +1904,7 @@ let
       sources."signal-exit-3.0.2"
       sources."split-1.0.1"
       sources."statuses-1.4.0"
-      (sources."string-width-2.1.1" // {
-        dependencies = [
-          sources."is-fullwidth-code-point-2.0.0"
-        ];
-      })
+      sources."string-width-2.1.1"
       (sources."strip-ansi-4.0.0" // {
         dependencies = [
           sources."ansi-regex-3.0.0"
@@ -1931,6 +1927,7 @@ let
       sources."wkx-0.4.6"
       (sources."wrap-ansi-2.1.0" // {
         dependencies = [
+          sources."is-fullwidth-code-point-1.0.0"
           sources."string-width-1.0.2"
           sources."strip-ansi-3.0.1"
         ];
