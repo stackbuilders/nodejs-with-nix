@@ -1,4 +1,5 @@
-*.swp
-.postgresql/
+# directories
 node_modules/
-result*
+
+# files
+*.swp
