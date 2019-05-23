@@ -3,7 +3,7 @@
   let 
     backend = import ./backend {};
   in {
-    networking.firewall.allowedTCPPorts = [ 80 3000 ];
+    networking.firewall.allowedTCPPorts = [ 80 ];
 
     services.nginx = {
       enable = true;
