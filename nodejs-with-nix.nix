@@ -7,6 +7,11 @@
 
     services.nginx = {
       enable = true;
+      virtualHosts."default" = {
+        locations."/" = {
+          proxyPass = "http://localhost:3000";
+        };
+      };
     };
 
     systemd.services.backend = {
