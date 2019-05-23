@@ -11,7 +11,8 @@
 
     systemd.services.backend = {
       serviceConfig = {
-        ExecStart = "${pkgs.nodejs-10_x}/bin/node ${backend.package}/bin/www";
+        WorkingDirectory = "${backend.package}";
+        ExecStart = "${pkgs.nodejs-10_x}/bin/node ./lib/node_modules/backend/bin/www";
       };
     };
   };
