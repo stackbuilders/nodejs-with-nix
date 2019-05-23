@@ -13,8 +13,8 @@
     services.nginx = {
       enable = true;
       virtualHosts."default" = {
-        locations."/" = {
-          proxyPass = "http://localhost:3000";
+        locations."/api/" = {
+          proxyPass = "http://localhost:3000/";
         };
       };
     };
