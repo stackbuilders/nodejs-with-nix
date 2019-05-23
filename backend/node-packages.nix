@@ -256,13 +256,13 @@ let
         sha1 = "e303a882b342cc3ee8ca513a79999734dab3ae2c";
       };
     };
-    "core-js-2.6.5" = {
+    "core-js-2.6.8" = {
       name = "core-js";
       packageName = "core-js";
-      version = "2.6.5";
+      version = "2.6.8";
       src = fetchurl {
-        url = "https://registry.npmjs.org/core-js/-/core-js-2.6.5.tgz";
-        sha512 = "klh/kDpwX8hryYL14M9w/xei6vrv6sE8gTHDG7/T/+SEovB/G4ejwcfE/CBzO6Edsu+OETZMZ3wcX/EjUkrl5A==";
+        url = "https://registry.npmjs.org/core-js/-/core-js-2.6.8.tgz";
+        sha512 = "RWlREFU74TEkdXzyl1bka66O3kYp8jeTXrvJZDzVVMH8AiHUSOFpL1yfhQJ+wHocAm1m+4971W1PPzfLuCv1vg==";
       };
     };
     "cross-spawn-6.0.5" = {
@@ -1733,7 +1733,7 @@ let
       sources."@types/node-12.0.2"
       sources."abbrev-1.1.1"
       sources."accepts-1.3.7"
-      sources."ansi-regex-3.0.0"
+      sources."ansi-regex-2.1.1"
       sources."any-promise-1.3.0"
       sources."array-flatten-1.1.1"
       sources."babel-runtime-6.26.0"
@@ -1744,11 +1744,8 @@ let
       sources."brace-expansion-1.1.11"
       sources."buffer-writer-2.0.0"
       sources."bytes-3.0.0"
-      (sources."cli-color-1.4.0" // {
-        dependencies = [
-          sources."ansi-regex-2.1.1"
-        ];
-      })
+      sources."camelcase-5.3.1"
+      sources."cli-color-1.4.0"
       sources."cliui-4.1.0"
       sources."cls-bluebird-2.1.0"
       sources."code-point-at-1.1.0"
@@ -1760,14 +1757,23 @@ let
       sources."cookie-0.3.1"
       sources."cookie-parser-1.4.4"
       sources."cookie-signature-1.0.6"
-      sources."core-js-2.6.5"
+      sources."core-js-2.6.8"
+      (sources."cross-spawn-6.0.5" // {
+        dependencies = [
+          sources."semver-5.7.0"
+        ];
+      })
       sources."d-1.0.0"
       sources."debug-2.6.9"
       sources."decamelize-1.2.0"
       sources."depd-1.1.2"
       sources."destroy-1.0.4"
       sources."dottie-2.0.1"
-      sources."editorconfig-0.15.3"
+      (sources."editorconfig-0.15.3" // {
+        dependencies = [
+          sources."semver-5.7.0"
+        ];
+      })
       sources."ee-first-1.1.1"
       sources."encodeurl-1.0.2"
       sources."end-of-stream-1.4.1"
@@ -1778,6 +1784,7 @@ let
       sources."escape-html-1.0.3"
       sources."etag-1.8.1"
       sources."event-emitter-0.3.5"
+      sources."execa-1.0.0"
       sources."express-4.16.4"
       sources."finalhandler-1.1.1"
       sources."find-up-3.0.0"
@@ -1786,6 +1793,7 @@ let
       sources."fs-extra-7.0.1"
       sources."fs.realpath-1.0.0"
       sources."get-caller-file-1.0.3"
+      sources."get-stream-4.1.0"
       sources."glob-7.1.4"
       sources."graceful-fs-4.1.15"
       sources."http-errors-1.6.3"
@@ -1797,15 +1805,11 @@ let
       sources."invert-kv-2.0.0"
       sources."ipaddr.js-1.9.0"
       sources."is-bluebird-1.0.2"
-      sources."is-fullwidth-code-point-2.0.0"
+      sources."is-fullwidth-code-point-1.0.0"
       sources."is-promise-2.1.0"
       sources."is-stream-1.1.0"
       sources."isexe-2.0.0"
-      (sources."js-beautify-1.10.0" // {
-        dependencies = [
-          sources."nopt-4.0.1"
-        ];
-      })
+      sources."js-beautify-1.10.0"
       sources."jsonfile-4.0.0"
       sources."lcid-2.0.0"
       sources."locate-path-3.0.0"
@@ -1823,11 +1827,8 @@ let
       sources."mime-types-2.1.24"
       sources."mimic-fn-2.1.0"
       sources."minimatch-3.0.4"
-      (sources."mkdirp-0.5.1" // {
-        dependencies = [
-          sources."minimist-0.0.8"
-        ];
-      })
+      sources."minimist-0.0.8"
+      sources."mkdirp-0.5.1"
       sources."moment-2.24.0"
       sources."moment-timezone-0.5.25"
       sources."morgan-1.9.1"
@@ -1835,19 +1836,14 @@ let
       sources."negotiator-0.6.2"
       sources."next-tick-1.0.0"
       sources."nice-try-1.0.5"
+      sources."nopt-4.0.1"
       sources."npm-run-path-2.0.2"
       sources."number-is-nan-1.0.1"
       sources."on-finished-2.3.0"
       sources."on-headers-1.0.2"
       sources."once-1.4.0"
       sources."os-homedir-1.0.2"
-      (sources."os-locale-3.1.0" // {
-        dependencies = [
-          sources."cross-spawn-6.0.5"
-          sources."execa-1.0.0"
-          sources."get-stream-4.1.0"
-        ];
-      })
+      sources."os-locale-3.1.0"
       sources."os-tmpdir-1.0.2"
       sources."osenv-0.1.5"
       sources."p-defer-1.0.0"
@@ -1863,11 +1859,7 @@ let
       sources."path-key-2.0.1"
       sources."path-parse-1.0.6"
       sources."path-to-regexp-0.1.7"
-      (sources."pg-7.11.0" // {
-        dependencies = [
-          sources."semver-4.3.2"
-        ];
-      })
+      sources."pg-7.11.0"
       sources."pg-connection-string-0.1.3"
       sources."pg-int8-1.0.1"
       sources."pg-pool-2.0.6"
@@ -1891,12 +1883,13 @@ let
       sources."retry-as-promised-3.2.0"
       sources."safe-buffer-5.1.2"
       sources."safer-buffer-2.1.2"
-      sources."semver-5.7.0"
+      sources."semver-4.3.2"
       sources."send-0.16.2"
       (sources."sequelize-5.8.6" // {
         dependencies = [
           sources."debug-4.1.1"
           sources."ms-2.1.1"
+          sources."semver-5.7.0"
         ];
       })
       sources."sequelize-cli-5.4.0"
@@ -1911,8 +1904,16 @@ let
       sources."signal-exit-3.0.2"
       sources."split-1.0.1"
       sources."statuses-1.4.0"
-      sources."string-width-2.1.1"
-      sources."strip-ansi-4.0.0"
+      (sources."string-width-2.1.1" // {
+        dependencies = [
+          sources."is-fullwidth-code-point-2.0.0"
+        ];
+      })
+      (sources."strip-ansi-4.0.0" // {
+        dependencies = [
+          sources."ansi-regex-3.0.0"
+        ];
+      })
       sources."strip-eof-1.0.0"
       sources."through-2.3.8"
       sources."timers-ext-0.1.7"
@@ -1930,8 +1931,6 @@ let
       sources."wkx-0.4.6"
       (sources."wrap-ansi-2.1.0" // {
         dependencies = [
-          sources."ansi-regex-2.1.1"
-          sources."is-fullwidth-code-point-1.0.0"
           sources."string-width-1.0.2"
           sources."strip-ansi-3.0.1"
         ];
@@ -1941,11 +1940,7 @@ let
       sources."y18n-4.0.0"
       sources."yallist-2.1.2"
       sources."yargs-12.0.5"
-      (sources."yargs-parser-11.1.1" // {
-        dependencies = [
-          sources."camelcase-5.3.1"
-        ];
-      })
+      sources."yargs-parser-11.1.1"
     ];
     buildInputs = globalBuildInputs;
     meta = {
