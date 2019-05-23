@@ -1,6 +1,8 @@
 { pkgs ? import <nixpkgs> {} }:
 
-{
-  backend = pkgs.callPackage ./backend {};
-  frontend = pkgs.callPackage ./frontend {};
+let
+  backend = import ./backend {};
+  frontend = import ./frontend {};
+in pkgs.stdenv.mkDerivation {
+  name = "nodejs-with-nix";
 }
