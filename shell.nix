@@ -1,7 +1,6 @@
 { pkgs ? import <nixpkgs> {} }:
 
-with pkgs; stdenv.mkDerivation {
-  name = "nodejs-with-nix";
+with pkgs; mkShell {
   buildInputs = [
     nodePackages.node2nix
     nodejs-10_x
