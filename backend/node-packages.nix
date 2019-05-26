@@ -94,13 +94,13 @@ let
         sha512 = "NF+epuEdnUYVlGuhaxbbq+dvJttwLnGY+YixlXlME5KpQ5W3CnXA5cVTneY3SPbPDRkcjMbifrwmFYcClgOZeg==";
       };
     };
-    "bluebird-3.5.4" = {
+    "bluebird-3.5.5" = {
       name = "bluebird";
       packageName = "bluebird";
-      version = "3.5.4";
+      version = "3.5.5";
       src = fetchurl {
-        url = "https://registry.npmjs.org/bluebird/-/bluebird-3.5.4.tgz";
-        sha512 = "FG+nFEZChJrbQ9tIccIfZJBz3J7mLrAhxakAbnrJWn8d7aKOC+LWifa0G+p4ZqKp4y13T7juYvdhq9NzKdsrjw==";
+        url = "https://registry.npmjs.org/bluebird/-/bluebird-3.5.5.tgz";
+        sha512 = "5am6HnnfN+urzt4yfg7IgTbotDjIT/u8AJpEt0sIU9FtXfVeezXAPKswrG+xKUCOYAINpSdgZVDU6QFh+cuH3w==";
       };
     };
     "body-parser-1.18.3" = {
@@ -1739,7 +1739,7 @@ let
       sources."babel-runtime-6.26.0"
       sources."balanced-match-1.0.0"
       sources."basic-auth-2.0.1"
-      sources."bluebird-3.5.4"
+      sources."bluebird-3.5.5"
       sources."body-parser-1.18.3"
       sources."brace-expansion-1.1.11"
       sources."buffer-writer-2.0.0"
