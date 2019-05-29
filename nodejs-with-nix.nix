@@ -32,6 +32,7 @@
         WorkingDirectory = "${backend.package}";
         ExecStart = "${pkgs.nodejs-10_x}/bin/node ./lib/node_modules/backend/bin/www";
       };
+      wantedBy = [ "multi-user.target" ];
     };
   };
 
