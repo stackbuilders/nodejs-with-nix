@@ -1,7 +1,7 @@
 {
   webserver = { pkgs, ... }:
   let 
-    backend = import ./backend {};
+    backend = (import ./backend {}).package;
     frontend = (import ./frontend {}).package.override {
       postInstall = ''
         echo "....."
@@ -29,7 +29,7 @@
     systemd.services.backend = {
       enable = true;
       serviceConfig = {
-        WorkingDirectory = "${backend.package}";
+        WorkingDirectory = "${backend}";
         ExecStart = "${pkgs.nodejs-10_x}/bin/node ./lib/node_modules/backend/bin/www";
       };
       wantedBy = [ "multi-user.target" ];
