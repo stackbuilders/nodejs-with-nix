@@ -4,13 +4,13 @@
 
 let
   sources = {
-    "@types/node-12.0.2" = {
+    "@types/node-12.0.3" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "12.0.2";
+      version = "12.0.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-12.0.2.tgz";
-        sha512 = "5tabW/i+9mhrfEOUcLDu2xBPsHJ+X5Orqy9FKpale3SjDA17j5AEpYq5vfy3oAeAHGcvANRCO3NV3d2D6q3NiA==";
+        url = "https://registry.npmjs.org/@types/node/-/node-12.0.3.tgz";
+        sha512 = "zkOxCS/fA+3SsdA+9Yun0iANxzhQRiNwTvJSr6N95JhuJ/x27z9G2URx1Jpt3zYFfCGUXZGL5UDxt5eyLE7wgw==";
       };
     };
     "abbrev-1.1.1" = {
@@ -256,13 +256,13 @@ let
         sha1 = "e303a882b342cc3ee8ca513a79999734dab3ae2c";
       };
     };
-    "core-js-2.6.8" = {
+    "core-js-2.6.9" = {
       name = "core-js";
       packageName = "core-js";
-      version = "2.6.8";
+      version = "2.6.9";
       src = fetchurl {
-        url = "https://registry.npmjs.org/core-js/-/core-js-2.6.8.tgz";
-        sha512 = "RWlREFU74TEkdXzyl1bka66O3kYp8jeTXrvJZDzVVMH8AiHUSOFpL1yfhQJ+wHocAm1m+4971W1PPzfLuCv1vg==";
+        url = "https://registry.npmjs.org/core-js/-/core-js-2.6.9.tgz";
+        sha512 = "HOpZf6eXmnl7la+cUdMnLvUxKNqLUzJvgIziQ0DiF3JwSImNphIqdGqzj6hIKyX04MmV0poclQ7+wjWvxQyR2A==";
       };
     };
     "cross-spawn-6.0.5" = {
@@ -1372,13 +1372,13 @@ let
         sha512 = "E64YFPUssFHEFBvpbbjr44NCLtI1AohxQ8ZSiJjQLskAdKuriYEP6VyGEsRDH8ScozGpkaX1BGvhanqCwkcEZw==";
       };
     };
-    "sequelize-5.8.6" = {
+    "sequelize-5.8.7" = {
       name = "sequelize";
       packageName = "sequelize";
-      version = "5.8.6";
+      version = "5.8.7";
       src = fetchurl {
-        url = "https://registry.npmjs.org/sequelize/-/sequelize-5.8.6.tgz";
-        sha512 = "u6KJuMBNLAE44PkGUTlevBseb6BV/n5r8CDGmYe1VxcGxdlWXYUiNXlEFEW0OL6ie+yXYV7dnPHa/fDi1M7gMw==";
+        url = "https://registry.npmjs.org/sequelize/-/sequelize-5.8.7.tgz";
+        sha512 = "1rubZM8fAyCt5ipyS+3HJ3Jbmb8WesLdPJ3jIbTD+78EbuPZILFEA5fK0mliVRBx7oM7oPULeVX0lxSRXBV1jw==";
       };
     };
     "sequelize-cli-5.4.0" = {
@@ -1730,7 +1730,7 @@ let
     version = "0.0.0";
     src = ./.;
     dependencies = [
-      sources."@types/node-12.0.2"
+      sources."@types/node-12.0.3"
       sources."abbrev-1.1.1"
       sources."accepts-1.3.7"
       sources."ansi-regex-2.1.1"
@@ -1757,7 +1757,7 @@ let
       sources."cookie-0.3.1"
       sources."cookie-parser-1.4.4"
       sources."cookie-signature-1.0.6"
-      sources."core-js-2.6.8"
+      sources."core-js-2.6.9"
       (sources."cross-spawn-6.0.5" // {
         dependencies = [
           sources."semver-5.7.0"
@@ -1805,7 +1805,7 @@ let
       sources."invert-kv-2.0.0"
       sources."ipaddr.js-1.9.0"
       sources."is-bluebird-1.0.2"
-      sources."is-fullwidth-code-point-1.0.0"
+      sources."is-fullwidth-code-point-2.0.0"
       sources."is-promise-2.1.0"
       sources."is-stream-1.1.0"
       sources."isexe-2.0.0"
@@ -1885,7 +1885,7 @@ let
       sources."safer-buffer-2.1.2"
       sources."semver-4.3.2"
       sources."send-0.16.2"
-      (sources."sequelize-5.8.6" // {
+      (sources."sequelize-5.8.7" // {
         dependencies = [
           sources."debug-4.1.1"
           sources."ms-2.1.1"
@@ -1904,11 +1904,7 @@ let
       sources."signal-exit-3.0.2"
       sources."split-1.0.1"
       sources."statuses-1.4.0"
-      (sources."string-width-2.1.1" // {
-        dependencies = [
-          sources."is-fullwidth-code-point-2.0.0"
-        ];
-      })
+      sources."string-width-2.1.1"
       (sources."strip-ansi-4.0.0" // {
         dependencies = [
           sources."ansi-regex-3.0.0"
@@ -1931,6 +1927,7 @@ let
       sources."wkx-0.4.6"
       (sources."wrap-ansi-2.1.0" // {
         dependencies = [
+          sources."is-fullwidth-code-point-1.0.0"
           sources."string-width-1.0.2"
           sources."strip-ansi-3.0.1"
         ];
