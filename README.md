@@ -44,3 +44,23 @@ Update [node-packages.nix](node-packages.nix):
 nix-shell
 node2nix
 ```
+
+## Deployment
+
+Install [nixops](https://nixos.org/nixops/manual):
+
+```
+nix-env -i nixops
+```
+
+Create a deployment:
+
+```
+nixops create ./nodejs-with-nix.nix ./nodejs-with-nix-vbox.nix -d nodejs-with-nix
+```
+
+Start the deployment:
+
+```
+nixops deploy -d nodejs-with-nix
+```
