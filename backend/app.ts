@@ -1,7 +1,7 @@
 import express from 'express';
 import logger from 'morgan';
 
-var usersRouter = require('./routes/users');
+import usersRouter from './routes/users';
 
 const app = express();
 
