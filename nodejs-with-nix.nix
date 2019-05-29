@@ -1,10 +1,13 @@
 {
   webserver = { pkgs, ... }:
   let 
-    backend = (import ./backend {}).package;
+    backend = (import ./backend {}).package.override {
+      postInstall = ''
+        npx tsc
+      '';
+    };
     frontend = (import ./frontend {}).package.override {
       postInstall = ''
-        echo "....."
         npm run build
       '';
     };
