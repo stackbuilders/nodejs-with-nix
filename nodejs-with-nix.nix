@@ -2,7 +2,12 @@
   webserver = { pkgs, ... }:
   let 
     backend = import ./backend {};
-    frontend = import ./frontend {};
+    frontend = (import ./frontend {}).package.override {
+      postInstall = ''
+        echo "....."
+        npm run build
+      '';
+    };
   in {
     networking.firewall.allowedTCPPorts = [ 80 ];
 
@@ -11,7 +16,7 @@
       virtualHosts."default" = {
         locations = {
           "/" = {
-            root = "${frontend.package}/lib/node_modules/frontend/public";
+            root = "${frontend}/lib/node_modules/frontend/build";
           };
 
           "/api/" = {
