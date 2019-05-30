@@ -1,26 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+
+import * as client from './client';
 
 const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const [users, setUsers] = useState<client.User[]>([]);
+  useEffect(() => {
+    client.getUsers().then(setUsers);
+  }, []);
+  const listUsers = users.map(({ id, firstName, lastName }) => 
+    <li key={id}>{firstName} {lastName}</li>
   );
+  return (<ul>{listUsers}</ul>);
 }
 
 export default App;
