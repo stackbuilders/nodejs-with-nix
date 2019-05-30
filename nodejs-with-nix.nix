@@ -3,7 +3,7 @@
   let 
     backend = (import ./backend {}).package.override {
       postInstall = ''
-        npx tsc
+        npm run build
       '';
     };
     frontend = (import ./frontend {}).package.override {
@@ -32,8 +32,8 @@
     systemd.services.backend = {
       enable = true;
       serviceConfig = {
-        WorkingDirectory = "${backend}";
-        ExecStart = "${pkgs.nodejs-10_x}/bin/node ./lib/node_modules/backend/bin/www";
+        WorkingDirectory = "${backend}/lib/node_modules/backend/dist";
+        ExecStart = "${pkgs.nodejs-10_x}/bin/node ./server.js";
       };
       wantedBy = [ "multi-user.target" ];
     };
