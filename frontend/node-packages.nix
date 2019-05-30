@@ -1138,6 +1138,15 @@ let
         sha512 = "d09ehQWqLMywP/PT/5JvXwPskPK9QCXUjiSkAHehreB381qExXf5JFCBWhfEyNonRbkIneCeYM99w+Ud48YIQQ==";
       };
     };
+    "@types/axios-0.14.0" = {
+      name = "_at_types_slash_axios";
+      packageName = "@types/axios";
+      version = "0.14.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/axios/-/axios-0.14.0.tgz";
+        sha1 = "ec2300fbe7d7dddd7eb9d3abf87999964cafce46";
+      };
+    };
     "@types/babel__core-7.1.2" = {
       name = "_at_types_slash_babel__core";
       packageName = "@types/babel__core";
@@ -2009,6 +2018,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/aws4/-/aws4-1.8.0.tgz";
         sha512 = "ReZxvNHIOv88FlT7rxcXIIC0fPt4KZqZbOlivyWtXLt8ESx84zd3kMC6iK5jVeS2qt+g7ftS7ye4fi06X5rtRQ==";
+      };
+    };
+    "axios-0.18.0" = {
+      name = "axios";
+      packageName = "axios";
+      version = "0.18.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/axios/-/axios-0.18.0.tgz";
+        sha1 = "32d53e4851efdc0a11993b6cd000789d70c05102";
       };
     };
     "axobject-query-2.0.2" = {
@@ -11648,6 +11666,7 @@ let
       sources."@svgr/plugin-jsx-4.3.0"
       sources."@svgr/plugin-svgo-4.2.0"
       sources."@svgr/webpack-4.1.0"
+      sources."@types/axios-0.14.0"
       sources."@types/babel__core-7.1.2"
       sources."@types/babel__generator-7.0.2"
       sources."@types/babel__template-7.0.2"
@@ -11749,6 +11768,11 @@ let
       sources."autoprefixer-9.5.1"
       sources."aws-sign2-0.7.0"
       sources."aws4-1.8.0"
+      (sources."axios-0.18.0" // {
+        dependencies = [
+          sources."is-buffer-1.1.6"
+        ];
+      })
       sources."axobject-query-2.0.2"
       (sources."babel-code-frame-6.26.0" // {
         dependencies = [

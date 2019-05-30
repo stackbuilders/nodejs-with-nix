@@ -22,6 +22,15 @@ let
         sha512 = "4r8qa0quOvh7lGD0pre62CAb1oni1OO6ecJLGCezTmhQ8Fz50Arx9RUszryR8KlgK6avuSXvviL6yWyViQABOg==";
       };
     };
+    "@types/cors-2.8.5" = {
+      name = "_at_types_slash_cors";
+      packageName = "@types/cors";
+      version = "2.8.5";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/cors/-/cors-2.8.5.tgz";
+        sha512 = "GmK8AKu8i+s+EChK/uZ5IbrXPcPaQKWaNSGevDT/7o3gFObwSUQwqb1jMqxuo+YPvj0ckGzINI+EO7EHcmJjKg==";
+      };
+    };
     "@types/express-4.16.1" = {
       name = "_at_types_slash_express";
       packageName = "@types/express";
@@ -38,6 +47,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/@types/express-serve-static-core/-/express-serve-static-core-4.16.6.tgz";
         sha512 = "8wr3CA/EMybyb6/V8qvTRKiNkPmgUA26uA9XWD6hlA0yFDuqi4r2L0C2B0U2HAYltJamoYJszlkaWM31vrKsHg==";
+      };
+    };
+    "@types/faker-4.1.5" = {
+      name = "_at_types_slash_faker";
+      packageName = "@types/faker";
+      version = "4.1.5";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/faker/-/faker-4.1.5.tgz";
+        sha512 = "YSDqoBEWYGdNk53xSkkb6REaUaVSlIjxIAGjj/nbLzlZOit7kUU+nA2zC2qQkIVO4MQ+3zl4Sz7aw+kbpHHHUQ==";
       };
     };
     "@types/mime-2.0.1" = {
@@ -337,6 +355,15 @@ let
         sha512 = "HOpZf6eXmnl7la+cUdMnLvUxKNqLUzJvgIziQ0DiF3JwSImNphIqdGqzj6hIKyX04MmV0poclQ7+wjWvxQyR2A==";
       };
     };
+    "cors-2.8.5" = {
+      name = "cors";
+      packageName = "cors";
+      version = "2.8.5";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/cors/-/cors-2.8.5.tgz";
+        sha512 = "KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==";
+      };
+    };
     "cross-spawn-6.0.5" = {
       name = "cross-spawn";
       packageName = "cross-spawn";
@@ -524,6 +551,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/express/-/express-4.16.4.tgz";
         sha512 = "j12Uuyb4FMrd/qQAm6uCHAkPtO8FDTRJZBDd5D2KOL2eLaz1yUNdUB/NOIyq0iU4q4cFarsUCrnFDPBcnksuOg==";
+      };
+    };
+    "faker-4.1.0" = {
+      name = "faker";
+      packageName = "faker";
+      version = "4.1.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/faker/-/faker-4.1.0.tgz";
+        sha1 = "1e45bbbecc6774b3c195fad2835109c6d748cc3f";
       };
     };
     "finalhandler-1.1.1" = {
@@ -1019,6 +1055,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/number-is-nan/-/number-is-nan-1.0.1.tgz";
         sha1 = "097b602b53422a522c1afb8790318336941a011d";
+      };
+    };
+    "object-assign-4.1.1" = {
+      name = "object-assign";
+      packageName = "object-assign";
+      version = "4.1.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz";
+        sha1 = "2109adc7965887cfc05cbbd442cac8bfbb360863";
       };
     };
     "on-finished-2.3.0" = {
@@ -1813,8 +1858,10 @@ let
     dependencies = [
       sources."@types/body-parser-1.17.0"
       sources."@types/connect-3.4.32"
+      sources."@types/cors-2.8.5"
       sources."@types/express-4.16.1"
       sources."@types/express-serve-static-core-4.16.6"
+      sources."@types/faker-4.1.5"
       sources."@types/mime-2.0.1"
       sources."@types/morgan-1.7.35"
       sources."@types/node-12.0.3"
@@ -1847,6 +1894,7 @@ let
       sources."cookie-parser-1.4.4"
       sources."cookie-signature-1.0.6"
       sources."core-js-2.6.9"
+      sources."cors-2.8.5"
       (sources."cross-spawn-6.0.5" // {
         dependencies = [
           sources."semver-5.7.0"
@@ -1875,6 +1923,7 @@ let
       sources."event-emitter-0.3.5"
       sources."execa-1.0.0"
       sources."express-4.16.4"
+      sources."faker-4.1.0"
       sources."finalhandler-1.1.1"
       sources."find-up-3.0.0"
       sources."forwarded-0.1.2"
@@ -1928,6 +1977,7 @@ let
       sources."nopt-4.0.1"
       sources."npm-run-path-2.0.2"
       sources."number-is-nan-1.0.1"
+      sources."object-assign-4.1.1"
       sources."on-finished-2.3.0"
       sources."on-headers-1.0.2"
       sources."once-1.4.0"
