@@ -4,6 +4,60 @@
 
 let
   sources = {
+    "@types/body-parser-1.17.0" = {
+      name = "_at_types_slash_body-parser";
+      packageName = "@types/body-parser";
+      version = "1.17.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/body-parser/-/body-parser-1.17.0.tgz";
+        sha512 = "a2+YeUjPkztKJu5aIF2yArYFQQp8d51wZ7DavSHjFuY1mqVgidGyzEQ41JIVNy82fXj8yPgy2vJmfIywgESW6w==";
+      };
+    };
+    "@types/connect-3.4.32" = {
+      name = "_at_types_slash_connect";
+      packageName = "@types/connect";
+      version = "3.4.32";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/connect/-/connect-3.4.32.tgz";
+        sha512 = "4r8qa0quOvh7lGD0pre62CAb1oni1OO6ecJLGCezTmhQ8Fz50Arx9RUszryR8KlgK6avuSXvviL6yWyViQABOg==";
+      };
+    };
+    "@types/express-4.16.1" = {
+      name = "_at_types_slash_express";
+      packageName = "@types/express";
+      version = "4.16.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/express/-/express-4.16.1.tgz";
+        sha512 = "V0clmJow23WeyblmACoxbHBu2JKlE5TiIme6Lem14FnPW9gsttyHtk6wq7njcdIWH1njAaFgR8gW09lgY98gQg==";
+      };
+    };
+    "@types/express-serve-static-core-4.16.6" = {
+      name = "_at_types_slash_express-serve-static-core";
+      packageName = "@types/express-serve-static-core";
+      version = "4.16.6";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/express-serve-static-core/-/express-serve-static-core-4.16.6.tgz";
+        sha512 = "8wr3CA/EMybyb6/V8qvTRKiNkPmgUA26uA9XWD6hlA0yFDuqi4r2L0C2B0U2HAYltJamoYJszlkaWM31vrKsHg==";
+      };
+    };
+    "@types/mime-2.0.1" = {
+      name = "_at_types_slash_mime";
+      packageName = "@types/mime";
+      version = "2.0.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/mime/-/mime-2.0.1.tgz";
+        sha512 = "FwI9gX75FgVBJ7ywgnq/P7tw+/o1GUbtP0KzbtusLigAOgIgNISRK0ZPl4qertvXSIE8YbsVJueQ90cDt9YYyw==";
+      };
+    };
+    "@types/morgan-1.7.35" = {
+      name = "_at_types_slash_morgan";
+      packageName = "@types/morgan";
+      version = "1.7.35";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/morgan/-/morgan-1.7.35.tgz";
+        sha512 = "E9qFi0seOkdlQnCTPv54brNfGWeFdRaEhI5tSue4pdx/V+xfxvMETsxXhOEcj1cYL+0n/jcTEmj/jD2gjzCwMg==";
+      };
+    };
     "@types/node-12.0.3" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
@@ -11,6 +65,24 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/@types/node/-/node-12.0.3.tgz";
         sha512 = "zkOxCS/fA+3SsdA+9Yun0iANxzhQRiNwTvJSr6N95JhuJ/x27z9G2URx1Jpt3zYFfCGUXZGL5UDxt5eyLE7wgw==";
+      };
+    };
+    "@types/range-parser-1.2.3" = {
+      name = "_at_types_slash_range-parser";
+      packageName = "@types/range-parser";
+      version = "1.2.3";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/range-parser/-/range-parser-1.2.3.tgz";
+        sha512 = "ewFXqrQHlFsgc09MK5jP5iR7vumV/BYayNC6PgJO2LPe8vrnNFyjQjSppfEngITi0qvfKtzFvgKymGheFM9UOA==";
+      };
+    };
+    "@types/serve-static-1.13.2" = {
+      name = "_at_types_slash_serve-static";
+      packageName = "@types/serve-static";
+      version = "1.13.2";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/serve-static/-/serve-static-1.13.2.tgz";
+        sha512 = "/BZ4QRLpH/bNYgZgwhKEh+5AsboDBcUdlBYgzoLX0fpj3Y2gp6EApyOlM3bK53wQS/OE1SrdSYBAbux2D1528Q==";
       };
     };
     "abbrev-1.1.1" = {
@@ -1570,6 +1642,15 @@ let
         sha512 = "TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==";
       };
     };
+    "typescript-3.5.1" = {
+      name = "typescript";
+      packageName = "typescript";
+      version = "3.5.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/typescript/-/typescript-3.5.1.tgz";
+        sha512 = "64HkdiRv1yYZsSe4xC1WVgamNigVYjlssIoaH2HcZF0+ijsk5YK2g0G34w9wJkze8+5ow4STd22AynfO6ZYYLw==";
+      };
+    };
     "umzug-2.2.0" = {
       name = "umzug";
       packageName = "umzug";
@@ -1730,7 +1811,15 @@ let
     version = "0.0.0";
     src = ./.;
     dependencies = [
+      sources."@types/body-parser-1.17.0"
+      sources."@types/connect-3.4.32"
+      sources."@types/express-4.16.1"
+      sources."@types/express-serve-static-core-4.16.6"
+      sources."@types/mime-2.0.1"
+      sources."@types/morgan-1.7.35"
       sources."@types/node-12.0.3"
+      sources."@types/range-parser-1.2.3"
+      sources."@types/serve-static-1.13.2"
       sources."abbrev-1.1.1"
       sources."accepts-1.3.7"
       sources."ansi-regex-2.1.1"
@@ -1915,6 +2004,7 @@ let
       sources."timers-ext-0.1.7"
       sources."toposort-class-1.0.1"
       sources."type-is-1.6.18"
+      sources."typescript-3.5.1"
       sources."umzug-2.2.0"
       sources."universalify-0.1.2"
       sources."unpipe-1.0.0"
