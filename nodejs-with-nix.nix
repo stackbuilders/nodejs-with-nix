@@ -1,4 +1,4 @@
 {
-  webserver = import ./nix/webserver.nix;
-  dbserver = import ./nix/dbserver.nix;
+  dbserver = import ./nixops/dbserver.nix;
+  webserver = import ./nixops/webserver.nix;
 }
