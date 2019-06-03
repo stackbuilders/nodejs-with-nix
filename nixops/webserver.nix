@@ -8,6 +8,7 @@ let
   };
   frontend = (import ../frontend {}).package.override {
     postInstall = ''
+      export REACT_APP_CLIENT_BASE_URL="http://192.168.56.102/api"
       npm run build
     '';
   };
