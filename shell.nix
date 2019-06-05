@@ -1,8 +1,14 @@
-{ pkgs ? import (fetchTarball "https://releases.nixos.org/nixos/19.03/nixos-19.03.172765.55df3fe5f3f/nixexprs.tar.xz") {} }:
+{ pkgs ? import (fetchTarball {
+  url = "https://github.com/NixOS/nixpkgs-channels/archive/06602f4bc76e46fe25e4c6e6e3db3f62714451d7.tar.gz";
+  sha256 = "0a2pqnfk6m5ys2z47n463f86kqzk1g4527vib8fj9yagir4c1ph4";
+}) {}
+, nodejs ? pkgs.nodejs-10_x
+}:
 
 with pkgs; mkShell {
   buildInputs = [
+    nixops
     nodePackages.node2nix
-    nodejs-10_x
+    nodejs
   ];
 }
