@@ -10,5 +10,13 @@ with pkgs; mkShell {
     nixops
     nodePackages.node2nix
     nodejs
+    postgresql
   ];
+  shellHook = ''
+    export PGDATA="$PWD/.postgres/data"
+
+    if [ ! -d $PGDATA ]; then
+      initdb --auth-local -D $PGDATA
+    fi
+  '';
 }
