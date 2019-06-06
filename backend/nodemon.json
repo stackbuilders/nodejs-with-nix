@@ -1,9 +1,14 @@
 {
+  "execMap": {
+    "ts": "ts-node"
+  },
   "ignore": [
-    "config",
-    "dist",
-    "node_modules"
+    "config/*",
+    "dist/*",
+    "migrations/*",
+    "node_modules/*"
   ],
-  "ext": "ts",
-  "exec": "ts-node ./server.ts"
+  "watch": [
+    "src/"
+  ]
 }

@@ -2,7 +2,7 @@ import cors from 'cors';
 import express from 'express';
 import logger from 'morgan';
 
-import usersRouter from './routes/users';
+import usersRouter from './user/router';
 
 const app = express();
 
