@@ -1,5 +1,2 @@
-# directories
+.postgres/
 node_modules/
-
-# files
-*.swp
