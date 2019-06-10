@@ -1,10 +1,10 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   services.postgresql = {
     enable = true;
-    ensureDatabase = [
-      "backend"
-    ];
+    initialScript = pkgs.writeText "initial-script" ''
+      CREATE DATABASE backend;
+    '';
   };
 }
