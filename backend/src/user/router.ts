@@ -10,7 +10,10 @@ router.get('/', async (req, res, next) => {
 });
 
 router.get('/:id', async (req, res, next) => {
-  const user = await User.findByPk(req.params.id);
+  const user = await User.findOne({ where: { id: req.params.id } });
+  if (user === null) {
+    return res.status(404).json({ message: 'User not found' });
+  }
   res.json(user);
 });
 
