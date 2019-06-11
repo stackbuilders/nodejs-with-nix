@@ -4,6 +4,7 @@ let
   backend = (import ../backend {}).package.override {
     postInstall = ''
       npm run build
+      npx sequelize db:migrate 
     '';
   };
   frontend = (import ../frontend {}).package.override {
@@ -32,6 +33,9 @@ in {
 
   systemd.services.backend = {
     enable = true;
+    environment = {
+      BACKEND_DATABASE_URL = "postgresql://192.168.56.101/backend";
+    };
     serviceConfig = {
       WorkingDirectory = "${backend}/lib/node_modules/backend/dist";
       ExecStart = "${pkgs.nodejs-10_x}/bin/node ./server.js";

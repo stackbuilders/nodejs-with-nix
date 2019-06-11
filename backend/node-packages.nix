@@ -4,6 +4,15 @@
 
 let
   sources = {
+    "@types/bluebird-3.5.27" = {
+      name = "_at_types_slash_bluebird";
+      packageName = "@types/bluebird";
+      version = "3.5.27";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/bluebird/-/bluebird-3.5.27.tgz";
+        sha512 = "6BmYWSBea18+tSjjSC3QIyV93ZKAeNWGM7R6aYt1ryTZXrlHF+QLV0G2yV0viEGVyRkyQsWfMoJ0k/YghBX5sQ==";
+      };
+    };
     "@types/body-parser-1.17.0" = {
       name = "_at_types_slash_body-parser";
       packageName = "@types/body-parser";
@@ -29,6 +38,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/@types/cors/-/cors-2.8.5.tgz";
         sha512 = "GmK8AKu8i+s+EChK/uZ5IbrXPcPaQKWaNSGevDT/7o3gFObwSUQwqb1jMqxuo+YPvj0ckGzINI+EO7EHcmJjKg==";
+      };
+    };
+    "@types/dotenv-6.1.1" = {
+      name = "_at_types_slash_dotenv";
+      packageName = "@types/dotenv";
+      version = "6.1.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/dotenv/-/dotenv-6.1.1.tgz";
+        sha512 = "ftQl3DtBvqHl9L16tpqqzA4YzCSXZfi7g8cQceTz5rOlYtk/IZbFjAv3mLOQlNIgOaylCQWQoBdDQHPgEBJPHg==";
       };
     };
     "@types/express-4.16.1" = {
@@ -76,13 +94,13 @@ let
         sha512 = "E9qFi0seOkdlQnCTPv54brNfGWeFdRaEhI5tSue4pdx/V+xfxvMETsxXhOEcj1cYL+0n/jcTEmj/jD2gjzCwMg==";
       };
     };
-    "@types/node-12.0.3" = {
+    "@types/node-12.0.7" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "12.0.3";
+      version = "12.0.7";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-12.0.3.tgz";
-        sha512 = "zkOxCS/fA+3SsdA+9Yun0iANxzhQRiNwTvJSr6N95JhuJ/x27z9G2URx1Jpt3zYFfCGUXZGL5UDxt5eyLE7wgw==";
+        url = "https://registry.npmjs.org/@types/node/-/node-12.0.7.tgz";
+        sha512 = "1YKeT4JitGgE4SOzyB9eMwO0nGVNkNEsm9qlIt1Lqm/tG2QEiSMTD4kS3aO6L+w5SClLVxALmIBESK6Mk5wX0A==";
       };
     };
     "@types/range-parser-1.2.3" = {
@@ -101,6 +119,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/@types/serve-static/-/serve-static-1.13.2.tgz";
         sha512 = "/BZ4QRLpH/bNYgZgwhKEh+5AsboDBcUdlBYgzoLX0fpj3Y2gp6EApyOlM3bK53wQS/OE1SrdSYBAbux2D1528Q==";
+      };
+    };
+    "@types/validator-10.11.1" = {
+      name = "_at_types_slash_validator";
+      packageName = "@types/validator";
+      version = "10.11.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/validator/-/validator-10.11.1.tgz";
+        sha512 = "bVhLqvb+5xUNWRFnuuecRVISTvsG6AdhrB2kb/tChgtuTTqARqlQ3rLhOPy8cINZEUB8PkR+goyWF6fWxg4iSw==";
       };
     };
     "abbrev-1.1.1" = {
@@ -425,6 +452,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/destroy/-/destroy-1.0.4.tgz";
         sha1 = "978857442c44749e4206613e37946205826abd80";
+      };
+    };
+    "dotenv-8.0.0" = {
+      name = "dotenv";
+      packageName = "dotenv";
+      version = "8.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/dotenv/-/dotenv-8.0.0.tgz";
+        sha512 = "30xVGqjLjiUOArT4+M5q9sYdvuR4riM6yK9wMcas9Vbp6zZa+ocC9dp6QoftuhTPhFAiLK/0C5Ni2nou/Bk8lg==";
       };
     };
     "dottie-2.0.1" = {
@@ -1856,17 +1892,20 @@ let
     version = "0.0.0";
     src = ./.;
     dependencies = [
+      sources."@types/bluebird-3.5.27"
       sources."@types/body-parser-1.17.0"
       sources."@types/connect-3.4.32"
       sources."@types/cors-2.8.5"
+      sources."@types/dotenv-6.1.1"
       sources."@types/express-4.16.1"
       sources."@types/express-serve-static-core-4.16.6"
       sources."@types/faker-4.1.5"
       sources."@types/mime-2.0.1"
       sources."@types/morgan-1.7.35"
-      sources."@types/node-12.0.3"
+      sources."@types/node-12.0.7"
       sources."@types/range-parser-1.2.3"
       sources."@types/serve-static-1.13.2"
+      sources."@types/validator-10.11.1"
       sources."abbrev-1.1.1"
       sources."accepts-1.3.7"
       sources."ansi-regex-2.1.1"
@@ -1905,6 +1944,7 @@ let
       sources."decamelize-1.2.0"
       sources."depd-1.1.2"
       sources."destroy-1.0.4"
+      sources."dotenv-8.0.0"
       sources."dottie-2.0.1"
       (sources."editorconfig-0.15.3" // {
         dependencies = [
