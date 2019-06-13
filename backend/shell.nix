@@ -6,27 +6,36 @@ with pkgs; mkShell {
     postgresql_11
   ];
   shellHook = ''
-    export NIX_SHELL_DIR="$PWD/.nix-shell"
+    export PGDATA="$PWD/.nix-shell/postgres/data"
+    export PGHOST="$PWD/.nix-shell/postgres/host"
+    export PGLOG="$PWD/.nix-shell/postgres/log"
 
-    export PGDATA="$NIX_SHELL_DIR/var/lib/postgres/data"
     export PGDATABASE="backend"
-    export PGHOST="$NIX_SHELL_DIR/tmp"
-    export PGLOG="$NIX_SHELL_DIR/var/log/postgres"
 
-    if [ ! -d $PGDATA ]; then
-      ${pkgs.postgresql_11}/bin/initdb --auth=trust > /dev/null
+    stop() {
+      if [ -f "$PGDATA/postmaster.pid" ]; then
+        pg_ctl stop
+      fi
+    }
+
+    if [ ! -d "$PGDATA" ]; then
+      initdb --auth=trust > /dev/null
     fi
 
-    if [ ! -d $PGLOG ]; then
-      mkdir -p $PGLOG
+    if [ ! -d "$PGHOST" ]; then
+      mkdir -p "$PGHOST"
     fi
 
-    if [ ! -d $PGHOST ]; then
-      mkdir -p $PGHOST
+    if [ ! -d "$PGLOG" ]; then
+      mkdir -p "$PGLOG"
     fi
 
-    ${pkgs.postgresql_11}/bin/pg_ctl start -l "$PGLOG/logfile" -o "-c listen_addresses= -c unix_socket_directories=$PGHOST"
+    pg_ctl start \
+      -l "$PGLOG/logfile" \
+      -o "-c listen_addresses= -c unix_socket_directories=$PGHOST"
 
-    trap "${pkgs.postgresql_11}/bin/pg_ctl stop" EXIT
+    createdb 2> /dev/null
+
+    trap stop EXIT
   '';
 }
