@@ -21,7 +21,9 @@ function App() {
 function Users() {
   const [users, setUsers] = useState<client.User[]>([]);
   useEffect(() => {
-    client.getUsers().then(setUsers);
+    client.getUsers().then(setUsers).catch(() => {
+      alert("Unable to fetch users");
+    });
   }, []);
   const listUsers = users.map(({ id, firstName, lastName }) => 
     <li key={id}>{firstName} {lastName}</li>
