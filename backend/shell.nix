@@ -12,6 +12,8 @@ with pkgs; mkShell {
 
     export PGDATABASE="backend"
 
+    export BACKEND_DATABASE_URL="postgresql:///$PGDATABASE?host=$PGHOST"
+
     stop() {
       if [ -f "$PGDATA/postmaster.pid" ]; then
         pg_ctl stop
