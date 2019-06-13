@@ -1,8 +1,24 @@
 import React, { useEffect, useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route
+} from 'react-router-dom';
 
 import * as client from './client';
 
-const App: React.FC = () => {
+function App() {
+  return (
+    <Router>
+      <Route exact path="/" render={() => (
+        <Redirect to="/users" />
+      )} />
+      <Route path="/users" component={Users} />
+    </Router>
+  );
+}
+
+function Users() {
   const [users, setUsers] = useState<client.User[]>([]);
   useEffect(() => {
     client.getUsers().then(setUsers);
