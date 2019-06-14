@@ -1,8 +1,12 @@
 { pkgs, ... }:
 
 let 
+  backendDatabaseUrl = "postgresql://192.168.56.101/backend";
   backend = (import ../backend {}).package.override {
     postInstall = ''
+      export BACKEND_DATABASE_URL="${backendDatabaseUrl}"
+      export NODE_ENV="production"
+
       npm run build
       npx sequelize db:migrate 
     '';
@@ -10,6 +14,7 @@ let
   frontend = (import ../frontend {}).package.override {
     postInstall = ''
       export REACT_APP_CLIENT_BASE_URL="http://192.168.56.102/api"
+
       npm run build
     '';
   };
@@ -34,7 +39,7 @@ in {
   systemd.services.backend = {
     enable = true;
     environment = {
-      BACKEND_DATABASE_URL = "postgresql://192.168.56.101/backend";
+      BACKEND_DATABASE_URL = backendDatabaseUrl;
     };
     serviceConfig = {
       WorkingDirectory = "${backend}/lib/node_modules/backend/dist";
