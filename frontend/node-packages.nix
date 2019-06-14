@@ -1183,6 +1183,15 @@ let
         sha512 = "XYVgHF2sQ0YblLRMLNPB3CkFMewzFmlDsH/TneZFHUXDlABQgh88uOxuez7ZcXxayLFrqLwtDH1t+FmlFwNZxw==";
       };
     };
+    "@types/history-4.7.2" = {
+      name = "_at_types_slash_history";
+      packageName = "@types/history";
+      version = "4.7.2";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/history/-/history-4.7.2.tgz";
+        sha512 = "ui3WwXmjTaY73fOQ3/m3nnajU/Orhi6cEu5rzX+BrAAJxa3eITXZ5ch9suPqtM03OWhAHhPSyBGCN4UKoxO20Q==";
+      };
+    };
     "@types/istanbul-lib-coverage-2.0.1" = {
       name = "_at_types_slash_istanbul-lib-coverage";
       packageName = "@types/istanbul-lib-coverage";
@@ -1271,6 +1280,24 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/@types/react-dom/-/react-dom-16.8.4.tgz";
         sha512 = "eIRpEW73DCzPIMaNBDP5pPIpK1KXyZwNgfxiVagb5iGiz6da+9A5hslSX6GAQKdO7SayVCS/Fr2kjqprgAvkfA==";
+      };
+    };
+    "@types/react-router-5.0.1" = {
+      name = "_at_types_slash_react-router";
+      packageName = "@types/react-router";
+      version = "5.0.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/react-router/-/react-router-5.0.1.tgz";
+        sha512 = "vOyVO0u3Cs0w6G5DzYqNVqcTsurEnDgOmmkJf2s7VwtunWzpPgI6dHsCBX68vXqeICpP6jCfojgJcHkm5BV7hQ==";
+      };
+    };
+    "@types/react-router-dom-4.3.3" = {
+      name = "_at_types_slash_react-router-dom";
+      packageName = "@types/react-router-dom";
+      version = "4.3.3";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@types/react-router-dom/-/react-router-dom-4.3.3.tgz";
+        sha512 = "xj0DmFjgvAqRfh/kJPO7apD5G30yPQe+8slu/dugioQOkdKpyzc4Fgk4hoTelm6CSHz7pI2PPsW5+Y6GRBF2zw==";
       };
     };
     "@types/stack-utils-1.0.1" = {
@@ -4864,6 +4891,15 @@ let
         sha1 = "f10748cbe76af964b7c96c93c6bcc28af120c081";
       };
     };
+    "gud-1.0.0" = {
+      name = "gud";
+      packageName = "gud";
+      version = "1.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/gud/-/gud-1.0.0.tgz";
+        sha512 = "zGEOVKFM5sVPPrYs7J5/hYEw2Pof8KCyOwyhG8sAF26mCAeUFAcYPu1mwB7hhpIP29zOIBaDqwuHdLp0jvZXjw==";
+      };
+    };
     "gzip-size-5.0.0" = {
       name = "gzip-size";
       packageName = "gzip-size";
@@ -5053,6 +5089,15 @@ let
         sha512 = "l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==";
       };
     };
+    "history-4.9.0" = {
+      name = "history";
+      packageName = "history";
+      version = "4.9.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/history/-/history-4.9.0.tgz";
+        sha512 = "H2DkjCjXf0Op9OAr6nJ56fcRkTSNrUiv41vNJ6IswJjif6wlpZK0BTfFbi7qK9dXLSYZxkq5lBsj3vUjlYBYZA==";
+      };
+    };
     "hmac-drbg-1.0.1" = {
       name = "hmac-drbg";
       packageName = "hmac-drbg";
@@ -5060,6 +5105,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/hmac-drbg/-/hmac-drbg-1.0.1.tgz";
         sha1 = "d2745701025a6c775a6c545793ed502fc0c649a1";
+      };
+    };
+    "hoist-non-react-statics-3.3.0" = {
+      name = "hoist-non-react-statics";
+      packageName = "hoist-non-react-statics";
+      version = "3.3.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.0.tgz";
+        sha512 = "0XsbTXxgiaCDYDIWFcwkmerZPSwywfUqYmwT4jzewKTQSWoE6FCMoUVOeBJWK3E/CrWbxRG3m5GzY4lnIwGRBA==";
       };
     };
     "hosted-git-info-2.7.1" = {
@@ -5870,6 +5924,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/is-wsl/-/is-wsl-1.1.0.tgz";
         sha1 = "1f16e4aa22b04d1336b66188a66af3c600c3a66d";
+      };
+    };
+    "isarray-0.0.1" = {
+      name = "isarray";
+      packageName = "isarray";
+      version = "0.0.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz";
+        sha1 = "8a18acfca9a8f4177e09abfc6038939b05d1eedf";
       };
     };
     "isarray-1.0.0" = {
@@ -6970,6 +7033,15 @@ let
         sha512 = "OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==";
       };
     };
+    "mini-create-react-context-0.3.2" = {
+      name = "mini-create-react-context";
+      packageName = "mini-create-react-context";
+      version = "0.3.2";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/mini-create-react-context/-/mini-create-react-context-0.3.2.tgz";
+        sha512 = "2v+OeetEyliMt5VHMXsBhABoJ0/M4RCe7fatd/fBy6SMiKazUSEt3gxxypfnk2SHMkdBYvorHRoQxuGoiwbzAw==";
+      };
+    };
     "mini-css-extract-plugin-0.5.0" = {
       name = "mini-css-extract-plugin";
       packageName = "mini-css-extract-plugin";
@@ -7832,6 +7904,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-0.1.7.tgz";
         sha1 = "df604178005f522f15eb4490e7247a1bfaa67f8c";
+      };
+    };
+    "path-to-regexp-1.7.0" = {
+      name = "path-to-regexp";
+      packageName = "path-to-regexp";
+      version = "1.7.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-1.7.0.tgz";
+        sha1 = "59fde0f435badacba103a84e9d3bc64e96b9937d";
       };
     };
     "path-type-2.0.0" = {
@@ -9013,6 +9094,24 @@ let
         sha512 = "aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==";
       };
     };
+    "react-router-5.0.1" = {
+      name = "react-router";
+      packageName = "react-router";
+      version = "5.0.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/react-router/-/react-router-5.0.1.tgz";
+        sha512 = "EM7suCPNKb1NxcTZ2LEOWFtQBQRQXecLxVpdsP4DW4PbbqYWeRiLyV/Tt1SdCrvT2jcyXAXmVTmzvSzrPR63Bg==";
+      };
+    };
+    "react-router-dom-5.0.1" = {
+      name = "react-router-dom";
+      packageName = "react-router-dom";
+      version = "5.0.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/react-router-dom/-/react-router-dom-5.0.1.tgz";
+        sha512 = "zaVHSy7NN0G91/Bz9GD4owex5+eop+KvgbxXsP/O+iW1/Ln+BrJ8QiIR5a6xNPtrdTvLkxqlDClx13QO1uB8CA==";
+      };
+    };
     "react-scripts-3.0.1" = {
       name = "react-scripts";
       packageName = "react-scripts";
@@ -9389,6 +9488,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/resolve-from/-/resolve-from-4.0.0.tgz";
         sha512 = "pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==";
+      };
+    };
+    "resolve-pathname-2.2.0" = {
+      name = "resolve-pathname";
+      packageName = "resolve-pathname";
+      version = "2.2.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/resolve-pathname/-/resolve-pathname-2.2.0.tgz";
+        sha512 = "bAFz9ld18RzJfddgrO2e/0S2O81710++chRMUxHjXOYKF6jTAMrUNZrEZ1PvV0zlhfjidm08iRPdTLPno1FuRg==";
       };
     };
     "resolve-url-0.2.1" = {
@@ -10399,6 +10507,24 @@ let
         sha1 = "405411a8e7e6339fe64db9a234de11dc31e02bd4";
       };
     };
+    "tiny-invariant-1.0.4" = {
+      name = "tiny-invariant";
+      packageName = "tiny-invariant";
+      version = "1.0.4";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/tiny-invariant/-/tiny-invariant-1.0.4.tgz";
+        sha512 = "lMhRd/djQJ3MoaHEBrw8e2/uM4rs9YMNk0iOr8rHQ0QdbM7D4l0gFl3szKdeixrlyfm9Zqi4dxHCM2qVG8ND5g==";
+      };
+    };
+    "tiny-warning-1.0.2" = {
+      name = "tiny-warning";
+      packageName = "tiny-warning";
+      version = "1.0.2";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/tiny-warning/-/tiny-warning-1.0.2.tgz";
+        sha512 = "rru86D9CpQRLvsFG5XFdy0KdLAvjdQDyZCsRcuu60WtzFylDM3eAWSxEVz5kzL2Gp544XiUvPbVKtOA/txLi9Q==";
+      };
+    };
     "tmp-0.0.33" = {
       name = "tmp";
       packageName = "tmp";
@@ -10901,6 +11027,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz";
         sha512 = "DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==";
+      };
+    };
+    "value-equal-0.4.0" = {
+      name = "value-equal";
+      packageName = "value-equal";
+      version = "0.4.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/value-equal/-/value-equal-0.4.0.tgz";
+        sha512 = "x+cYdNnaA3CxvMaTX0INdTCN8m8aF2uY9BvEqmxuYp8bL09cs/kWVQPVGcA35fMktdOsP69IgU7wFj/61dJHEw==";
       };
     };
     "vary-1.1.2" = {
@@ -11671,6 +11806,7 @@ let
       sources."@types/babel__generator-7.0.2"
       sources."@types/babel__template-7.0.2"
       sources."@types/babel__traverse-7.0.6"
+      sources."@types/history-4.7.2"
       sources."@types/istanbul-lib-coverage-2.0.1"
       sources."@types/istanbul-lib-report-1.1.1"
       sources."@types/istanbul-reports-1.1.1"
@@ -11681,6 +11817,8 @@ let
       sources."@types/q-1.5.2"
       sources."@types/react-16.8.18"
       sources."@types/react-dom-16.8.4"
+      sources."@types/react-router-5.0.1"
+      sources."@types/react-router-dom-4.3.3"
       sources."@types/stack-utils-1.0.1"
       sources."@types/unist-2.0.3"
       sources."@types/vfile-3.0.2"
@@ -12272,6 +12410,7 @@ let
       })
       sources."graceful-fs-4.1.15"
       sources."growly-1.3.0"
+      sources."gud-1.0.0"
       sources."gzip-size-5.0.0"
       sources."handle-thing-2.0.0"
       (sources."handlebars-4.1.2" // {
@@ -12304,7 +12443,9 @@ let
       sources."hastscript-5.1.0"
       sources."he-1.2.0"
       sources."hex-color-regex-1.1.0"
+      sources."history-4.9.0"
       sources."hmac-drbg-1.0.1"
+      sources."hoist-non-react-statics-3.3.0"
       sources."hosted-git-info-2.7.1"
       sources."hpack.js-2.1.6"
       sources."hsl-regex-1.0.0"
@@ -12591,6 +12732,7 @@ let
       sources."mime-db-1.40.0"
       sources."mime-types-2.1.24"
       sources."mimic-fn-1.2.0"
+      sources."mini-create-react-context-0.3.2"
       sources."mini-css-extract-plugin-0.5.0"
       sources."minimalistic-assert-1.0.1"
       sources."minimalistic-crypto-utils-1.0.1"
@@ -12916,6 +13058,13 @@ let
       sources."react-dom-16.8.6"
       sources."react-error-overlay-5.1.6"
       sources."react-is-16.8.6"
+      (sources."react-router-5.0.1" // {
+        dependencies = [
+          sources."isarray-0.0.1"
+          sources."path-to-regexp-1.7.0"
+        ];
+      })
+      sources."react-router-dom-5.0.1"
       sources."react-scripts-3.0.1"
       sources."read-pkg-3.0.0"
       sources."read-pkg-up-4.0.0"
@@ -12967,6 +13116,7 @@ let
       sources."resolve-1.10.0"
       sources."resolve-cwd-2.0.0"
       sources."resolve-from-3.0.0"
+      sources."resolve-pathname-2.2.0"
       sources."resolve-url-0.2.1"
       sources."restore-cursor-2.0.0"
       sources."ret-0.1.15"
@@ -13160,6 +13310,8 @@ let
       sources."thunky-1.0.3"
       sources."timers-browserify-2.0.10"
       sources."timsort-0.3.0"
+      sources."tiny-invariant-1.0.4"
+      sources."tiny-warning-1.0.2"
       sources."tmp-0.0.33"
       sources."tmpl-1.0.4"
       sources."to-arraybuffer-1.0.1"
@@ -13240,6 +13392,7 @@ let
       sources."utils-merge-1.0.1"
       sources."uuid-3.3.2"
       sources."validate-npm-package-license-3.0.4"
+      sources."value-equal-0.4.0"
       sources."vary-1.1.2"
       sources."vendors-1.0.3"
       sources."verror-1.10.0"
