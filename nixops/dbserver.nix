@@ -5,8 +5,11 @@
 
   services.postgresql = {
     enable = true;
-    initialScript = pkgs.writeText "initial-script" ''
-      CREATE DATABASE backend;
+    enableTCPIP = true;
+    package = pkgs.postgresql_11;
+    authentication = ''
+      host backend postgres 192.168.56.1/32 trust
+      host backend postgres 192.168.56.102/32 trust
     '';
   };
 }

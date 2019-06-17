@@ -1,10 +1,10 @@
 { pkgs, ... }:
 
 let 
-  backendDatabaseUrl = "postgresql://192.168.56.101/backend";
+  backendDatabaseUrl = "postgres://postgres@192.168.56.101/backend";
   backend = (import ../backend {}).package.override {
     postInstall = ''
-      export BACKEND_DATABASE_URL="${backendDatabaseUrl}"
+      export DATABASE_URL="${backendDatabaseUrl}"
       export NODE_ENV="production"
 
       npm run build
@@ -39,7 +39,7 @@ in {
   systemd.services.backend = {
     enable = true;
     environment = {
-      BACKEND_DATABASE_URL = backendDatabaseUrl;
+      DATABASE_URL = backendDatabaseUrl;
     };
     serviceConfig = {
       WorkingDirectory = "${backend}/lib/node_modules/backend/dist";
