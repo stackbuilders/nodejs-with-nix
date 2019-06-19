@@ -35,11 +35,11 @@ in {
   systemd.services.backend = {
     enable = true;
     environment = {
-      DATABASE_URL = "postgres://root@192.168.56.104/backend";
+      DATABASE_URL = "postgres://root@192.168.56.101/backend";
     };
     serviceConfig = {
       WorkingDirectory = "${backend}/lib/node_modules/backend";
-      ExecStartPre = "${pkgs.nodejs-10_x}/bin/npx sequelize db:migrate";
+      ExecStartPre = "${pkgs.nodejs-10_x}/bin/npx sequelize db:migrate && ${pkgs.nodejs-10_x}/bin/npx sequelize db:seed:all";
       ExecStart = "${pkgs.nodejs-10_x}/bin/node ./dist/server.js";
     };
     wantedBy = [ "multi-user.target" ];
