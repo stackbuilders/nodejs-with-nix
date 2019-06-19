@@ -8,8 +8,12 @@
     enableTCPIP = true;
     package = pkgs.postgresql_11;
     authentication = ''
-      host backend postgres 192.168.56.1/32 trust
-      host backend postgres 192.168.56.102/32 trust
+      host backend root 192.168.56.1/24 trust
+    '';
+    initialScript = pkgs.writeText "initial-script"  ''
+      CREATE ROLE root WITH LOGIN;
+      CREATE DATABASE backend;
+      GRANT ALL PRIVILEGES ON DATABASE backend TO root;
     '';
   };
 }
