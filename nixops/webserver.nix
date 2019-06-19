@@ -21,6 +21,9 @@ in {
       locations = {
         "/" = {
           root = "${frontend}/lib/node_modules/frontend/build";
+          extraConfig = ''
+            try_files $uri /index.html;
+          '';
         };
         "/api/" = {
           proxyPass = "http://localhost:3000/";
